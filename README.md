@@ -1,6 +1,6 @@
 # Dockerfile Linter
 
-[![Build Status](https://ci.isaev.tech/api/badges/IsaevTech/hadolint/status.svg)](https://ci.isaev.tech/IsaevTech/pylint)
+[![Build Status](https://ci.isaev.tech/api/badges/IsaevTech/hadolint/status.svg)](https://ci.isaev.tech/IsaevTech/hadolint)
 
 ## Usage
 
