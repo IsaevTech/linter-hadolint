@@ -38,19 +38,19 @@ jobs:
         id: meta
         uses: docker/metadata-action@master
         with:
-          images: ismv/pytest
+          images: ismv/${{ github.event.repository.name }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@master
         with:
           context: .
           load: true
-          tags: ismv/pytest:latest
+          tags: ismv/${{ github.event.repository.name }}:latest
           labels: ${{ steps.meta.outputs.labels }}
 
       - uses: azure/container-scan@v0
         with:
-          image-name: ismv/pytest:latest
+          image-name: ismv/${{ github.event.repository.name }}:latest
           severity-threshold: CRITICAL
 
       - name: send telegram message
